@@ -22,4 +22,14 @@ char to_char(int index){
     return char(index + 65);
 }
 
+// Adjust an idex to make if fall in the range 0-25
+int adjust_index(int index){
+    if(index >= 0) return index%26;
+    else{
+        int value = index;
+        while(value<0) value += 26;
+        return value;
+    }
+}
+
 #endif
